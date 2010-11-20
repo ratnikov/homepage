@@ -1,9 +1,11 @@
-<h1><%= t 'profile.name' %></h1>
+<h1><%= @profile.name %></h1>
+
+<p><%= gravatar_image @profile.email %></p>
 
 <dl>
-  <dt>Phone</dt>
-  <dd><%= t 'profile.phone' %></dt>
+  <dt><%= t 'profile.phone' %></dt>
+  <dd><%= @profile.phone %></dt>
 
-  <dt>Email</dt>
-  <dd><%= t 'profile.email' %></dt>
+  <dt><%= t 'profile.email' %></dt>
+  <dd><%= @profile.email %></dt>
 </dl>

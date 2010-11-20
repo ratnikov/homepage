@@ -85,6 +85,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rr (1.0.2)
     rspec (2.1.0)
       rspec-core (~> 2.1.0)
       rspec-expectations (~> 2.1.0)
@@ -117,6 +118,7 @@ DEPENDENCIES
   cucumber-rails
   pg
   rails (= 3.0.3)
+  rr
   rspec
   rspec-rails
   sqlite3
