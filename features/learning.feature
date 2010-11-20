@@ -10,7 +10,6 @@ Feature: Users that visit my home page should learn about me
      Then I should see "profile.email"
       And I should see "profile.phone"
 
-  @wip
   Scenario: Users should learn how I look like
     When I visit "/"
 
