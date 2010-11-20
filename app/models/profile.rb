@@ -1,6 +1,10 @@
 class Profile
+  YAML_PATH = File.join(Rails.root, 'config', 'profile.yml').freeze
   class << self
-    attr_accessor :yaml_config
+    def yaml_config
+      @yaml_config ||= YAML.load_file(YAML_PATH)
+      @yaml_config
+    end
   end
 
   attr_reader :attributes
