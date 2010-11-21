@@ -17,7 +17,6 @@ Feature: Users should learn about the projects I have done
      And I should see "alpha centauri"
      And I should see /space voyage/
 
-  @wip
   Scenario: A user should learn what technologies projects used via tags
     When I am on the home page
 

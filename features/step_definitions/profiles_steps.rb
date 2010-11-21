@@ -6,5 +6,5 @@ Given /^profile attributes are as follows:$/ do |table|
 end
 
 Then /^I should see a (\w+) tag$/ do |tag_name|
-  page.should have_xpath("//span[@class=#{tag_name}]")
+  page.should have_xpath("//li[@class='#{tag_name}']")
 end
