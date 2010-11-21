@@ -23,9 +23,17 @@
   <h1><%= t 'project.list' %></h1>
   <ul>
     <% Project.all.each do |project| -%>
-      <li>
+      <li class="project">
       <h2><%= project_name project %></h2>
       <p><%= h project.description %></p>
+
+      <% if (tags = project.tags).any? -%>
+        <ul class="tags">
+          <% tags.each do |tag| -%>
+            <%= li_tag tag %>
+          <% end -%>
+        </ul>
+      <% end -%>
       </li>
     <% end -%>
   </ul>

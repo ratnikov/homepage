@@ -4,3 +4,7 @@ Given /^profile attributes are as follows:$/ do |table|
 
   stub( Profile ).yaml_config.returns attributes
 end
+
+Then /^I should see a (\w+) tag$/ do |tag_name|
+  page.should have_xpath("//span[@class=#{tag_name}]")
+end

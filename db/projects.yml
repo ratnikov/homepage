@@ -2,7 +2,9 @@
 - name: Pothole tracker
   url: potholetracker.com
   description: Service that scans twitter for pothole uploads.
+  tag_list: rails, twitter, postgresql
 
 - name: JShell
   url: jshell.heroku.com
-  description: An extensible command-line shel-like widget.
+  description: An extensible command-line shell-like widget.
+  tag_list: javascript, sinatra
