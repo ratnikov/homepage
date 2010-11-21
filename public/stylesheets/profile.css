@@ -15,24 +15,44 @@ h1 {
   height: 200px;
   border: 5px #ddd solid;
   float: left; 
-}
-
-#contact dl {
-  float: left;
-  width: 800px;
-}
-
-#contact dt {
-  width: 150px;
-  float: left;
-  clear: left;
-  text-align: right;
-
   margin-right: 1em;
 }
-#contact dt:after { 
-  content: ":";
+
+#contact ul.links {
+  margin: 1em;
 }
 
-#contact dd {
+#contact ul.links li {
+  margin-right: 1em;
+  float: left;
+}
+
+ul.links a {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+
+  border: 2px solid #777;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+
+  text-decoration: none;
+  font-size: 70%;
+
+  color: #222;
+  border-color: #777;
+  background-color: #ddd;
+}
+
+.links a:hover {
+  background-color: #aaa;
+}
+
+.links a.twitter {
+  color: #002244;
+  border: 2px solid #557799;
+  background-color: #C0DEED;
+}
+
+.links a.twitter:hover {
+  background-color: #5599bb;
 }

@@ -4,14 +4,17 @@
 <div id="contact">
   <div><%= gravatar_tag @profile.email, :size => 200 %></div>
 
-  <dl>
-    <dt><%= t 'profile.name' %></dt>
-    <dd><%= @profile.name %></dt>
+  <ul>
+    <li><%= @profile.name %></li>
 
-    <dt><%= t 'profile.email' %></dt>
-    <dd><%= mail_to @profile.email %></dd>
+    <li><%= mail_to @profile.email %></li>
 
-    <dt><%= t 'profile.phone' %></dt>
-    <dd><%= @profile.phone %></dd>
-  </dl>
+    <li><%= @profile.phone %></li>
+  </ul>
+
+  <ul class="links">
+    <% @profile.links.each do |link| %>
+      <li><%= web_link link %></li>
+    <% end %>
+  </ul>
 </div>
