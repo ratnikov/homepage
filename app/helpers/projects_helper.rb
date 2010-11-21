@@ -9,7 +9,12 @@ module ProjectsHelper
     end
   end
 
-  def li_tag(tag)
-    content_tag :li, h(tag), :class => tag.gsub(/\W+/, '-')
+  def tag_icon(tag)
+    icon_path = "/images/#{tag.dasherize}-icon.png"
+    if File.exists? File.join(Rails.root, 'public', icon_path)
+      image_tag icon_path
+    else
+      content_tag :span, h(tag)
+    end
   end
 end

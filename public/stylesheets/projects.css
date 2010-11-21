@@ -36,12 +36,17 @@ li.project p {
   padding-top: 0.5em;
 }
 
-li.project ul.tags {
+ul.tags {
   margin-top: 1em;
 }
 
-li.project ul.tags li {
+ul.tags li {
   display: inline;
+
+  margin-left: 1em;
+}
+
+ul.tags li span {
 
   margin-left: 1em;
   padding: 0.3em;
@@ -49,5 +54,10 @@ li.project ul.tags li {
   border-radius: 0.3em;
   -moz-border-radius: 0.3em;
 
-  background: #ccc;
+  background: #ccc; 
+}
+
+ul.tags li img {
+  height: 30px;
+  vertical-align: middle;
 }
