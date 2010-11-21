@@ -14,3 +14,10 @@ Feature: Users that visit my home page should learn about me
     When I visit "/"
 
      Then I should see "ratnikov@gmail.com" gravatar
+
+  @wip
+  Scenario: Users should learn about my locations on the web
+    When I visit "/"
+
+     Then I should see a link to "http://github.com/ratnikov"
+      And I should see a link to "http://twitter.com/dfr_work"
