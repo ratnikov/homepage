@@ -7,4 +7,4 @@
 - name: JShell
   url: jshell.heroku.com
   description: An extensible command-line shell-like widget.
-  tag_list: javascript, sinatra
+  tag_list: rack
