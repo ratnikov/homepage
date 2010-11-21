@@ -8,3 +8,9 @@ Then /^I should see my (\w+)$/ do |attribute|
     Then %{I should see "#{profile.read_attribute(attribute)}"}
   end
 end
+
+Then /^I should see my (\w+) link$/ do |link|
+  profile = Profile.new
+
+  Then %{I should see a link to "#{profile.read_attribute(link)}"}
+end

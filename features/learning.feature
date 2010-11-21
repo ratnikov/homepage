@@ -15,9 +15,8 @@ Feature: Users that visit my home page should learn about me
 
      Then I should see my gravatar
 
-  @wip
   Scenario: Users should learn about my locations on the web
     When I visit "/"
 
-     Then I should see a link to "http://github.com/ratnikov"
-      And I should see a link to "http://twitter.com/dfr_work"
+     Then I should see my github link
+      And I should see my twitter link
