@@ -9,7 +9,7 @@
 
     <li><%= mail_to @profile.email %></li>
 
-    <li><%= @profile.phone %></li>
+    <%= content_tag :li, @profile.phone if @profile.attribute?(:phone) %>
   </ul>
 
   <ul class="links">

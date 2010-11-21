@@ -7,9 +7,11 @@ group :development do
   gem 'sqlite3'
   gem 'rspec'
   gem 'rspec-rails'
+
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do

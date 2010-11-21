@@ -9,5 +9,5 @@ Then /^I should see "(.*)" gravatar$/ do |email|
 end
 
 Then /^I should see a link to "(.*)"$/ do |url|
-  page.should have_link(url)
+  page.should have_xpath("//a[@href='#{url}']")
 end
