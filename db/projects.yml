@@ -1,6 +1,8 @@
 ---
-- name: Foo bar
-  description: foobarness is completely awesome
+- name: Pothole tracker
+  url: potholetracker.com
+  description: Service that scans twitter for pothole uploads.
 
-- name: Bar foo
-  description: "It's also pretty awesome"
+- name: JShell
+  url: jshell.heroku.com
+  description: An extensible command-line shel-like widget.
