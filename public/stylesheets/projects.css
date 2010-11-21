@@ -18,8 +18,8 @@
   color: #fff;
 }
 
-#projects li {
-  padding: .5em;
+li.project {
+  padding: 1em;
   margin-top: .5em;
 
   border-radius: .5em;
@@ -28,6 +28,26 @@
   background-color: #fff;
 }
 
-#projects li h2 {
+li.project h2 {
   font-size: 130%;
+}
+
+li.project p {
+  padding-top: 0.5em;
+}
+
+li.project ul.tags {
+  margin-top: 1em;
+}
+
+li.project ul.tags li {
+  display: inline;
+
+  margin-left: 1em;
+  padding: 0.3em;
+
+  border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+
+  background: #ccc;
 }
