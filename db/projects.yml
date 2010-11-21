@@ -1,4 +1,9 @@
 ---
+- name: Stumie
+  url: stumie.heroku.com
+  description: A centralized profile information service.
+  tag_list: rails, mongodb, postgresql
+
 - name: Pothole tracker
   url: potholetracker.com
   description: Service that scans twitter for pothole uploads.
