@@ -1,0 +1,33 @@
+#projects {
+  width: 500px;
+  float: right;
+  margin-right: 2em;
+
+  background-color: #444;
+  padding: 2em;
+
+  border-radius: 2em 0 0 2em;
+  -moz-border-radius: 2em 0 0 2em;
+}
+
+#projects a {
+}
+
+#projects h1 {
+  font-size: 2em;
+  color: #fff;
+}
+
+#projects li {
+  padding: .5em;
+  margin-top: .5em;
+
+  border-radius: .5em;
+  -moz-border-radius: .5em;
+
+  background-color: #fff;
+}
+
+#projects li h2 {
+  font-size: 130%;
+}
