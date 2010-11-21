@@ -1,11 +1,17 @@
 <h1><%= @profile.name %></h1>
 
-<p><%= gravatar_tag @profile.email %></p>
 
-<dl>
-  <dt><%= t 'profile.phone' %></dt>
-  <dd><%= @profile.phone %></dt>
+<div id="contact">
+  <div><%= gravatar_tag @profile.email, :size => 200 %></div>
 
-  <dt><%= t 'profile.email' %></dt>
-  <dd><%= @profile.email %></dt>
-</dl>
+  <dl>
+    <dt><%= t 'profile.name' %></dt>
+    <dd><%= @profile.name %></dt>
+
+    <dt><%= t 'profile.email' %></dt>
+    <dd><%= mail_to @profile.email %></dd>
+
+    <dt><%= t 'profile.phone' %></dt>
+    <dd><%= @profile.phone %></dd>
+  </dl>
+</div>

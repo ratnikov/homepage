@@ -1,0 +1,38 @@
+h1 { 
+  font-size: 4em;
+  text-align: center;
+  margin: 1em;
+}
+
+#contact {
+  margin-left: 2em;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+#contact img { 
+  size: 100px;
+  margin: 0 2px;
+  border: 1px blue solid;
+  float: left; 
+}
+
+#contact dl {
+  float: left;
+  width: 800px;
+}
+
+#contact dt {
+  width: 150px;
+  float: left;
+  clear: left;
+  text-align: right;
+
+  margin-right: 1em;
+}
+#contact dt:after { 
+  content: ":";
+}
+
+#contact dd {
+}
