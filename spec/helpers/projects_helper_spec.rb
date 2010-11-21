@@ -7,6 +7,11 @@ describe ProjectsHelper do
         link_to('foobar', 'http://foobar.com')
     end
 
+    it "should append http// if url has none" do
+      project_name(Project.new(:name => 'foobar', :url => 'foobar.com')).should ==
+        link_to('foobar', 'http://foobar.com')
+    end
+
     it "should return just the name if no url available" do
       project_name(Project.new(:name => 'foobar')).should == 'foobar'
     end

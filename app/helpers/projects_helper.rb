@@ -1,7 +1,12 @@
 module ProjectsHelper
   def project_name(project)
     label = h project.name
-    project.url.blank? ? label : link_to(label, project.url)
+
+    unless (url = project.url).blank?
+      url =~ /^http/ ? link_to(label, url) : link_to(label, "http://#{url}")
+    else
+      label
+    end
   end
 
   def li_tag(tag)

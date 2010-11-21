@@ -2,9 +2,9 @@ Feature: Users should learn about the projects I have done
 
   Background:
     Given there are following projects:
-      | name           | url               | tag_list          | description                                     |
-      | foobar         | http://foobar.com | rails, postgresql | An awesome project that describes foos and bars |
-      | alpha centauri |                   | astronomy, travel | An astronomical project about space voyage      |
+      | name           | url        | tag_list          | description                                     |
+      | foobar         | foobar.com | rails, postgresql | An awesome project that describes foos and bars |
+      | alpha centauri |            | astronomy, travel | An astronomical project about space voyage      |
 
   Scenario: A user should see project information
 
