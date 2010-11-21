@@ -12,7 +12,7 @@ module ProjectsHelper
   def tag_icon(tag)
     icon_path = "/images/#{tag.dasherize}-icon.png"
     if File.exists? File.join(Rails.root, 'public', icon_path)
-      image_tag icon_path
+      image_tag icon_path, :title => h(tag)
     else
       content_tag :span, h(tag)
     end
