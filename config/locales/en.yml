@@ -7,3 +7,6 @@ en:
     email: Email
     phone: Phone
     links: Links
+
+  project:
+    list: Projects

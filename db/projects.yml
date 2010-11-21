@@ -1,0 +1,6 @@
+---
+- name: Foo bar
+  description: foobarness is completely awesome
+
+- name: Bar foo
+  description: "It's also pretty awesome"

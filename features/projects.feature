@@ -6,7 +6,6 @@ Feature: Users should learn about the projects I have done
       | foobar | An awesome project that describes foos and bars | http://foobar.com |
       | alpha centauri | An astronomical project about space voyage |                |
 
-  @wip
   Scenario: A user should see project information
 
     When I am on the home page

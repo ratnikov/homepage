@@ -18,3 +18,15 @@
     <% end %>
   </ul>
 </div>
+
+<div id="projects">
+  <h1><%= t 'project.list' %></h1>
+  <ul>
+    <% Project.all.each do |project| -%>
+      <li>
+      <h2><%= project_name project %></h2>
+      <p><%= h project.description %></p>
+      </li>
+    <% end -%>
+  </ul>
+</div>
