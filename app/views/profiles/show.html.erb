@@ -38,3 +38,9 @@
     <% end -%>
   </ul>
 </div>
+
+<ul>
+  <% @profile.skills.each do |skill| -%>
+    <li><%= h skill %></li>
+  <% end -%>
+</ul>

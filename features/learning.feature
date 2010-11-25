@@ -7,8 +7,8 @@ Feature: Users that visit my home page should learn about me
       | links  | http://github.com/johndoe, http://twitter.com/johndoe | 
 
       And profile includes following skills:
-	| many years of rails work experience |
-        | very good with jquery |
+        | rails experience |
+        | jquery is awesome |
         | love git |
 
   Scenario: Users should learn my name
@@ -36,4 +36,6 @@ Feature: Users that visit my home page should learn about me
   Scenario: Users should learn about my skills
     When I visit "/"
 
-    Then I should see /rails work experience.*very good with jquery.*love git/
+    Then I should see "rails experience"
+     And I should see "jquery is awesome"
+     And I should see "love git"

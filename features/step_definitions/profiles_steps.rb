@@ -6,7 +6,7 @@ Given /^profile attributes are as follows:$/ do |table|
 end
 
 Given /^profile includes following skills:$/ do |table|
-  stub( Profile.yaml_config ).skills.returns table.raw.flatten
+  Profile.yaml_config.merge! 'skills' => table.raw.flatten
 end
 
 Then /^I should see a (\w+) tag$/ do |tag_name|
