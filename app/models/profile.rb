@@ -21,6 +21,10 @@ class Profile
     attributes[attribute.to_s]
   end
 
+  def skills
+    attribute?(:skills) ? Array.wrap(read_attribute(:skills)) : []
+  end
+
   private
 
   def method_missing(attribute)
