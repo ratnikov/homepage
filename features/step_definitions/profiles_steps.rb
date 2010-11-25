@@ -5,6 +5,10 @@ Given /^profile attributes are as follows:$/ do |table|
   stub( Profile ).yaml_config.returns attributes
 end
 
+Given /^profile includes following skills:$/ do |table|
+  stub( Profile.yaml_config ).skills.returns table.raw.flatten
+end
+
 Then /^I should see a (\w+) tag$/ do |tag_name|
   page.should have_xpath("//li[@class='#{tag_name}']")
 end

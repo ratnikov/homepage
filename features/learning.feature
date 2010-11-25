@@ -1,10 +1,15 @@
 Feature: Users that visit my home page should learn about me
   Background: 
     Given profile attributes are as follows:
-      | name  | John Doe |
-      | email | john@example.com |
-      | phone | (123) 456 7890   |
-      | links | http://github.com/johndoe, http://twitter.com/johndoe | 
+      | name   | John Doe |
+      | email  | john@example.com |
+      | phone  | (123) 456 7890   |
+      | links  | http://github.com/johndoe, http://twitter.com/johndoe | 
+
+      And profile includes following skills:
+	| many years of rails work experience |
+        | very good with jquery |
+        | love git |
 
   Scenario: Users should learn my name
     When I visit "/"
@@ -26,3 +31,9 @@ Feature: Users that visit my home page should learn about me
 
      Then I should see a link to "http://github.com/johndoe"
       And I should see a link to "http://twitter.com/johndoe"
+
+  @wip
+  Scenario: Users should learn about my skills
+    When I visit "/"
+
+    Then I should see /rails work experience.*very good with jquery.*love git/
