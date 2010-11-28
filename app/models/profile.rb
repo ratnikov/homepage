@@ -25,9 +25,9 @@ class Profile
     attribute?(:skills) ? Array.wrap(read_attribute(:skills)) : []
   end
 
-  def each_skill
+  def each_skill_group
     skills.each do |hash|
-      hash.each_pair { |prefix, value_or_arr| Array.wrap(value_or_arr).each { |value| yield prefix, value } }
+      hash.each_pair { |group, value_or_arr| yield(group, Array.wrap(value_or_arr)) }
     end
   end
 

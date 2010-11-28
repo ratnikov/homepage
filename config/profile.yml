@@ -18,7 +18,7 @@ skills:
     - "Developed a javascript library for simple REST resources manipulation (http://bit.ly/7R0AcJ)."
 
   Testing:
-      - Extensive work experience with both Shoulda and RSpec testing frameworks.
-      - Extended Shoulda to utilize setup - evaluate - check/should workflow.
-      - Utilized cucumber (webrat + selenium) for integration testing.
-      - Javascript unit testing using QUnit and Screw-Unit (blue-ridge).
+    - Extensive work experience with both Shoulda and RSpec testing frameworks.
+    - Extended Shoulda to utilize setup - evaluate - check/should workflow.
+    - Utilized cucumber (webrat + selenium) for integration testing.
+    - Javascript unit testing using QUnit and Screw-Unit (blue-ridge).

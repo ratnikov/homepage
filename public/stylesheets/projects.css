@@ -13,8 +13,7 @@
 #projects a {
 }
 
-#projects h1 {
-  font-size: 2em;
+#projects h2 {
   color: #fff;
 }
 
@@ -29,7 +28,7 @@ li.project {
 }
 
 li.project h2 {
-  font-size: 130%;
+  font-size: 1.3em;
 }
 
 li.project p {

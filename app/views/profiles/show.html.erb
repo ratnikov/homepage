@@ -1,26 +1,41 @@
 <h1 class="header"><%= @profile.name %></h1>
 
 
-<div id="contact">
-  <div><%= gravatar_tag @profile.email, :size => 200 %></div>
+<div id="content">
+  <div id="contact">
+    <div><%= gravatar_tag @profile.email, :size => 200 %></div>
 
-  <ul>
-    <li><%= @profile.name %></li>
+    <ul>
+      <li><%= @profile.name %></li>
 
-    <li><%= mail_to @profile.email %></li>
+      <li><%= mail_to @profile.email %></li>
 
-    <%= content_tag :li, @profile.phone if @profile.attribute?(:phone) %>
-  </ul>
+      <%= content_tag :li, @profile.phone if @profile.attribute?(:phone) %>
+    </ul>
 
-  <ul class="links">
-    <% @profile.links.each do |link| %>
-      <li><%= web_link link %></li>
-    <% end %>
-  </ul>
+    <ul class="links">
+      <% @profile.links.each do |link| %>
+        <li><%= web_link link %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div id="skills">
+    <% @profile.each_skill_group do |group, skills| -%>
+      <h2><%= h group %></h2>
+
+      <ul>
+        <% skills.each do |skill| -%>
+          <li><%= h skill %></li>
+        <% end -%>
+      </ul>
+    <% end -%>
+  </div>
+
 </div>
 
 <div id="projects">
-  <h1><%= t 'project.list' %></h1>
+  <h2><%= t 'project.list' %></h2>
   <ul>
     <% Project.all.each do |project| -%>
       <li class="project">
@@ -38,9 +53,3 @@
     <% end -%>
   </ul>
 </div>
-
-<ul>
-  <% @profile.skills.each do |skill| -%>
-    <li><%= h skill %></li>
-  <% end -%>
-</ul>

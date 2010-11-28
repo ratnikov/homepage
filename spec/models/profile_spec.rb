@@ -40,17 +40,17 @@ describe Profile do
     end
   end
 
-  describe "#each_skill" do
+  describe "#each_skill_group" do
     it "should iterate over the grouped skills" do
       stub( @profile ).attributes.returns 'skills' => [ { 'foo' => [ 'bar', 'baz' ] }, { 'alpha' => 'beta' } ]
 
       invocations = [ ]
 
-      @profile.each_skill do |prefix, name|
-        invocations << [ prefix, name ]
+      @profile.each_skill_group do |group, skills|
+        invocations << [ group, skills ]
       end
 
-      invocations.should == [ [ 'foo', 'bar' ], [ 'foo', 'baz' ], [ 'alpha', 'beta' ] ]
+      invocations.should == [ [ 'foo', [ 'bar', 'baz' ] ], [ 'alpha', [ 'beta' ] ] ]
     end
   end
 end

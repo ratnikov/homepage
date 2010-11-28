@@ -1,0 +1,16 @@
+#skills {
+  clear: left;
+  margin-left: 2em;
+}
+
+#skills h2 {
+  margin-top: 1em;
+}
+
+#skills ul {
+  list-style: disc;
+}
+
+#skills li {
+  margin-top: 1em;
+}

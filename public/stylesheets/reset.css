@@ -5,7 +5,14 @@ ul,ol { list-style: none; }
 fieldset,img { border: none; }
 caption,th { text-align: left; }
 table { border-collapse: collapse; border-spacing: 0; }
- 
+
+h1 {
+  font-size: 4em;
+}
+
+h2 { font-size: 2em; }
+body { font-size: 1em; }
+
 /* LAYOUT */
 .clear { clear:both; }
 .clearer { clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px; }
