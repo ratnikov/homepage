@@ -32,7 +32,6 @@ Feature: Users that visit my home page should learn about me
      Then I should see a link to "http://github.com/johndoe"
       And I should see a link to "http://twitter.com/johndoe"
 
-  @wip
   Scenario: Users should learn about my skills
     When I visit "/"
 

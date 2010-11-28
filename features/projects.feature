@@ -20,8 +20,8 @@ Feature: Users should learn about the projects I have done
   Scenario: A user should learn what technologies projects used via tags
     When I am on the home page
 
-    Then I should see a rails tag
-     And I should see a postgresql tag
+    Then I should see a rails icon
+     And I should see a postgresql icon
 
      And I should see "astronomy"
      And I should see "voyage"

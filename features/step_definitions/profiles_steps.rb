@@ -18,6 +18,6 @@ Given /^profile includes following skills:$/ do |table|
   Profile.yaml_config.merge! 'skills' => skills
 end
 
-Then /^I should see a (\w+) tag$/ do |tag_name|
-  page.should have_xpath("//li[@class='#{tag_name}']")
+Then /^I should see a (\w+) icon$/ do |tag_name|
+  page.should have_xpath("//img[@title='#{tag_name}']")
 end
