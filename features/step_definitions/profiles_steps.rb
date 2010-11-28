@@ -6,7 +6,16 @@ Given /^profile attributes are as follows:$/ do |table|
 end
 
 Given /^profile includes following skills:$/ do |table|
-  Profile.yaml_config.merge! 'skills' => table.raw.flatten
+  skills = table.raw.flatten.inject({}) do |acc, skill|
+    (group, name) = skill.split /\s*:\s*/
+    acc[group] ||= [ ]
+
+    acc[group] << name
+
+    acc
+  end
+
+  Profile.yaml_config.merge! 'skills' => skills
 end
 
 Then /^I should see a (\w+) tag$/ do |tag_name|

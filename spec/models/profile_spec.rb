@@ -22,9 +22,9 @@ describe Profile do
 
   describe "#skills" do
     it "should return the specified skills" do
-      stub( @profile ).attributes.returns 'skills' => [ 'foo', 'bar' ]
+      stub( @profile ).attributes.returns 'skills' => [ { 'foo' => 'bar' } ]
 
-      @profile.skills.should == [ 'foo', 'bar' ]
+      @profile.skills.should == [ { 'foo' => 'bar' } ]
     end
 
     it "should allow single skill" do
@@ -37,6 +37,20 @@ describe Profile do
       stub( @profile ).attributes.returns 'foo' => 'bar'
 
       @profile.skills.should == [ ]
+    end
+  end
+
+  describe "#each_skill" do
+    it "should iterate over the grouped skills" do
+      stub( @profile ).attributes.returns 'skills' => [ { 'foo' => [ 'bar', 'baz' ] }, { 'alpha' => 'beta' } ]
+
+      invocations = [ ]
+
+      @profile.each_skill do |prefix, name|
+        invocations << [ prefix, name ]
+      end
+
+      invocations.should == [ [ 'foo', 'bar' ], [ 'foo', 'baz' ], [ 'alpha', 'beta' ] ]
     end
   end
 end

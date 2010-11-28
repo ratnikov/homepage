@@ -5,3 +5,20 @@ email: ratnikov@gmail.com
 links:
   - http://github.com/ratnikov
   - http://twitter.com/dfr_work
+
+skills:
+  Ruby on Rails:
+    - "2 years of rails work experience; contributed to rails core (http://bit.ly/6Xe890)."
+    - "Extracted and customized various rails plugins and gems."
+    - "Proficient with ruby core language and familiar with ruby internals."
+
+  Javascript:
+    - "Highly proficient with jQuery library and unobtrusive javascript techniques."
+    - "Highly proficient with object-oriented programming using prototypal inheritance."
+    - "Developed a javascript library for simple REST resources manipulation (http://bit.ly/7R0AcJ)."
+
+  Testing:
+      - Extensive work experience with both Shoulda and RSpec testing frameworks.
+      - Extended Shoulda to utilize setup - evaluate - check/should workflow.
+      - Utilized cucumber (webrat + selenium) for integration testing.
+      - Javascript unit testing using QUnit and Screw-Unit (blue-ridge).

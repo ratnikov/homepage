@@ -25,6 +25,12 @@ class Profile
     attribute?(:skills) ? Array.wrap(read_attribute(:skills)) : []
   end
 
+  def each_skill
+    skills.each do |hash|
+      hash.each_pair { |prefix, value_or_arr| Array.wrap(value_or_arr).each { |value| yield prefix, value } }
+    end
+  end
+
   private
 
   def method_missing(attribute)
