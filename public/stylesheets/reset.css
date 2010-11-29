@@ -11,7 +11,10 @@ h1 {
 }
 
 h2 { font-size: 2em; }
-body { font-size: 1em; }
+body { 
+  font-size: 1em; 
+  font-family: helvetica;
+}
 
 /* LAYOUT */
 .clear { clear:both; }
