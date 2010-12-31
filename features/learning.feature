@@ -7,9 +7,10 @@ Feature: Users that visit my home page should learn about me
       | links  | http://github.com/johndoe, http://twitter.com/johndoe | 
 
       And profile includes following skills:
-	| Rails: work-experience |
+	| Rails: work-experience        |
 	| Javascript: jquery is awesome |
-	| Test: love rspec |
+	| Test: love rspec              |
+	| Link: www.example.com    |
 
   Scenario: Users should learn my name
     When I visit "/"
@@ -38,3 +39,4 @@ Feature: Users that visit my home page should learn about me
     Then I should see "work-experience"
      And I should see "jquery is awesome"
      And I should see "love rspec"
+     And I should see a link to "http://www.example.com"

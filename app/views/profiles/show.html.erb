@@ -26,7 +26,7 @@
 
       <ul>
         <% skills.each do |skill| -%>
-          <li><%= h skill %></li>
+          <li><%= auto_link h(skill) %></li>
         <% end -%>
       </ul>
     <% end -%>
