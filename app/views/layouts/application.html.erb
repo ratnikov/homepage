@@ -3,12 +3,17 @@
 <head>
   <title>Dmitry Ratnikov</title>
 
-  <%= stylesheet_link_tag 'reset', 'base', 'profile', 'projects' , 'skills' %>
+  <%= stylesheet_link_tag 'reset', 'base', 'projects' , 'skills' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <h1 class="header"><%= profile.name %></h1>
 
-<%= yield %>
+  <div id="wrapper">
+    <%= yield %>
+
+    <div style="clear: both;"></div>
+  </div>
 
 </body>
 </html>

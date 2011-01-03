@@ -1,37 +1,13 @@
-<h1 class="header"><%= @profile.name %></h1>
-
-
-<div id="content">
-  <div id="contact">
-    <div><%= gravatar_tag @profile.email, :size => 200 %></div>
+<div id="skills">
+  <% @profile.each_skill_group do |group, skills| -%>
+    <h2><%= h group %></h2>
 
     <ul>
-      <li><%= @profile.name %></li>
-
-      <li><%= mail_to @profile.email %></li>
-
-      <%= content_tag :li, @profile.phone if @profile.attribute?(:phone) %>
+      <% skills.each do |skill| -%>
+        <li><%= auto_link h(skill) %></li>
+      <% end -%>
     </ul>
-
-    <ul class="links">
-      <% @profile.links.each do |link| %>
-        <li><%= web_link link %></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div id="skills">
-    <% @profile.each_skill_group do |group, skills| -%>
-      <h2><%= h group %></h2>
-
-      <ul>
-        <% skills.each do |skill| -%>
-          <li><%= auto_link h(skill) %></li>
-        <% end -%>
-      </ul>
-    <% end -%>
-  </div>
-
+  <% end -%>
 </div>
 
 <div id="projects">
