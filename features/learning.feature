@@ -16,17 +16,20 @@ Feature: Users that visit my home page should learn about me
     When I visit "/"
      Then I should see "John Doe"
 
+  @todo
   Scenario: Users should learn my contact information
     When I visit "/"
 
      Then I should see "john@example.com"
       And I should see "(123) 456 7890"
 
+  @todo
   Scenario: Users should learn how I look like
     When I visit "/"
 
      Then I should see "john@example.com" gravatar
 
+  @todo
   Scenario: Users should learn about my locations on the web
     When I visit "/"
 
