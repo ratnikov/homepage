@@ -5,7 +5,6 @@ gem 'active_hash'
 
 group :development do
   gem 'rr'
-  gem 'sqlite3'
   gem 'rspec'
   gem 'rspec-rails'
 

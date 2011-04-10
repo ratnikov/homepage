@@ -113,8 +113,6 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
-    sqlite3 (0.1.1)
-      ffi (>= 0.6.3)
     term-ansicolor (1.0.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -137,4 +135,3 @@ DEPENDENCIES
   rr
   rspec
   rspec-rails
-  sqlite3
